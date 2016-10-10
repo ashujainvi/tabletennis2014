@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>TABLE TENNIS</title>
+		<script type="text/javascript" src="script/jquery.js"></script>
+		<script type="text/javascript" src="script/code.js"></script>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+   		<script src="js/bootstrap.min.js"></script>
+		
+	
+	</head>
+	<body>
+			<div id="content">
+			  <form  id="registration"  class="form-horizontal">
+			
+				
+				   <div class="form-group">
+					<label for="Name" class="col-md-3 col-xs-3 control-label">Name:</label>
+					<div class="col-md-9 col-xs-9"><input type="text" id="Name" class="form-control" name="Name" placeholder="Full name" required/></div>
+				   </div>
+
+				   <div class="form-group">
+					<label for="DOB" class="col-md-3 col-xs-3 control-label">Date of Birth:</label>
+					<div class="col-md-9 col-xs-9"><input type="date" id="DOB" class="form-control" name="DOB" placeholder="mm/dd/yyyy" required/></div>
+				   </div>
+
+				   <div class="form-group">	
+					<label for="Gender" class="col-md-3 col-xs-3 control-label">Gender:</label>
+					<div class="col-md-9 col-xs-9"><input type="radio" id="Gender" name="Gender" value="Male" required/>Male    <input type="radio" id="Gender" name="Gender" value="Female" required/>Female</div>
+				   </div>
+				   
+				   <div class="form-group">	
+					<label for="Name" class="col-md-3 col-xs-3 control-label">Institution:</label>
+					<div class="col-md-9 col-xs-9"><input type="text" id="Institution" class="form-control" placeholder="Name of institution" name="Institution" /></div>
+					</div>
+
+
+					<div class="form-group">
+					<label for="address" class="col-md-3 col-xs-3 control-label">Address:</label>
+					<div class="col-md-9 col-xs-9"><input type="text" id="Address" class="form-control" name="Address" placeholder="Permanent address" required/>
+					</div>
+					</div>
+
+					<div class="form-group">
+					<label for="contact" class="col-md-3 col-xs-3 control-label">Contact No.:</label>
+					<div class="col-md-9 col-xs-9"><input type="tel" id="ContactNo" class="form-control" name="ContactNo" pattern="[7-9]\d{9}" placeholder="Mobile number" required/></div>
+					</div>
+
+					<div class="form-group">
+					<label for="Name" class="col-md-3 col-xs-3 control-label">Email ID :</label>
+					<div class="col-md-9 col-xs-9"><input type="email" id="EmailId" class="form-control" name="EmailId" placeholder="someone@example.com" /></div>
+					</div>
+
+					<div class="form-group">
+					<label for="gdta" class="col-md-4 col-xs-3 control-label">Member of GDTA:</label>
+					<div class="col-md-6 col-xs-6 col-xs-offset-3 "><input type="radio" id="Member" name="Member" value="Yes" required/>Yes <br> <input type="radio" id="Member" name="Member" value="No" required/>No</div>
+					</div>
+
+					<div class="form-group">
+					<label for="Name" class="col-md-4 col-xs-3 control-label">Accomodation Required:</label>
+					<div class="col-md-6 col-xs-6 col-xs-offset-3"><input type="radio" id="Accomodation" name="Accomodation" value="Yes" required/>Yes <br> <input type="radio" id="Accomodation" name="Accomodation" value="No" required /> No</div>
+					</div>
+
+						<br>
+					<button id="submit" class="button btn btn-lg btn-block btn-warning">
+					<span class="glyphicon glyphicon-download"></span>  Submit 
+					</button>
+					
+				
+			
+			</form> <!-- ++form-horizontal div ends -->
+		    </div>
+  	</body>
+</html>

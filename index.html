@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	 <title>Table Tennis Tournament</title>
+
+  	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="Table Tennis 2014">
+      <meta name="author" content="SI">
+
+
+    <link rel="shortcut icon" href="images/main-logo2.png"/>
+    <link rel="stylesheet" type="text/css" href="css/styleblocks.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jq.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="script/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+	$('#download-form').click(function(){
+		alert("Kindly bring the filled form on the day of the event.");
+	});
+	
+    $('#querySubmitButton').click(function(){
+       var contact = $('#emailTextBox').val();
+       var query = $('#queryTextArea').val();
+       var html_content = $('.query').html();
+       $('.query').html("Sending... Please Wait!")
+       $.ajax({
+        type : 'post',
+        url : 'query.php',
+        data : {
+          contact : contact,
+          query : query
+        }
+       }).done(function(message){
+        console.log(message);
+        $('.query').html(html_content);
+        if (message == -1) {
+          alert("Enter valid contact details");
+        }
+        else if (message == -2) {
+          alert("Enter valid query");
+        }
+        else {
+          alert("We will contact you soon");
+        }
+       });
+    });
+  });
+</script>
+
+
+     <!-- ==========  Paralax Background ================= -->
+<script type="text/javascript">
+var wf_pbb_object = [
+{bc:"rgb(255, 255, 255)"},
+{img:"http://i62.tinypic.com/685u85.jpg", mm:true, ms:true, mms:2, mss:10, mmd:1, mso:"v", msd:1, im:"pattern", pr:"both", mma:"both", ofs:{x:0, y:0}, zi:1, sr:false, sb:false, isr:false, isb:false}
+];
+</script>
+<script type="text/javascript" src="http://web-features.net/api/wf.pbb.api.js"></script>
+<!-- ==========  Paralax Background ================= -->
+  	 
+  </head>
+
+
+    <body id="body">
+
+
+      <!-- CONTAINER FULL BEGINS============ -->
+      <div class="container-full" id="header-image">
+
+     <!--  ===================================================================nav=============================================================== -->
+                                                    <nav class="navbar navbar-inverse navbar-fixed-top" id="nav" role="navigation">
+                                          <div class="container-fluid">
+                                            <!-- Brand and toggle get grouped for better mobile display -->
+                                            <div class="navbar-header">
+                                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                              </button>
+                                              <a class="navbar-brand" href="http://tabletennis-akgec.co.in">
+                                              <img alt="Brand" src="images/main-logo2.png" style="width:23px;">
+                                              Table Tennis Tournament
+                                              </a>
+
+                                            </div>
+
+                                            <!-- Collect the nav links, forms, and other content for toggling -->
+                                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                              
+                                              <ul class="nav navbar-nav navbar-right">
+                                                <li><a href="#about">About</a></li>
+                                                
+                                                <li class="dropdown">
+                                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event Details<span class="caret"></span></a>
+                                                  <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#eligibility">Eligibility</a></li>
+                                                    <li><a href="#last-date">Last Date</a></li>
+                                                    <li><a href="#prizes">Prizes</a></li>
+                                                    <li><a href="#schedule">Schedule</a></li>
+                                                    <li><a href="#entry-fees">Entry Fees</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#notes">Notes</a></li>
+
+                                                  </ul>
+                                                </li>
+                                                <li><a href="#organising-committee">Organising Committee</a></li>
+                                                <li><a href="#reach-us">Reach Us Here</a></li>
+                                              </ul>
+                                            </div><!-- /.navbar-collapse -->
+                                          </div><!-- /.container-fluid -->
+                                        </nav>
+
+
+
+
+
+  <!--  ===================================================================nav ends=============================================================== -->
+              <br>
+              <br>
+              
+                  <!-- =====REGISTERATION BUTTON===== -->
+
+                    <img src="images/click here3.png" class="click-here-img"> <br><br><br>
+                     <div class="btn" id="button-register" type="button" data-toggle="modal" data-target="#register"><h3>Register</h3></div>
+                  <br> <br><br><br><br>
+                    <div class="img-circle" id="download-register" style="z-index:999;">
+                    <a href="Form.rtf" title="Download this for registrations" id="download-form">
+                      <i class="glyphicon glyphicon-download-alt" style="font-size:1.6em; margin:7px 0 0 13px;" ></i>
+                      </a></div>
+                  <!-- ========REGISTER button(toggles modal) ENDS=============== -->
+            
+
+            <div class="row">  <!-- row for heading : table tennis tournament 2014 -->
+
+              <div class="col-md-6 text-center v-center" >
+                
+                <img src="images/main-logo2.png" width="199px;"  style="margin-top:-64px;">
+                
+                <hr id="hr-small">
+                <br>
+              </div> 
+
+            </div><!--row for heading : table tennis tournament 2014 ENDS--> 
+              
+              <br>
+              <br>
+              <div  class="row"> <!-- row for down arrow -->
+                <div class="col-md-12 text-center"> 
+                  <div><a href="#begin-content"><i class="glyphicon glyphicon-chevron-down" id="down-arrow" style="font-size:2.1em;"></i></a></div> 
+                 <!-- +++DOWN SYMBOL+++ -->
+                </div>
+              </div> <!-- row ends -->
+              <br>
+              
+         </div> 
+            <!-- ========================container full ends ========================================================-->
+        
+
+
+          <!-- =========CONTENT BEGINS , HEADER IMAGE ENDS======== -->
+
+          <!-- =========================container FLUID BEGINS========== -->
+
+
+                        <div id="begin-content" class="container">
+
+                        <br>
+                      
+                            <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                   <img src="images/akglogo.png" style="width:200px;">
+            </div>
+            </div>
+
+                        <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+              <h2>Ajay Kumar Garg Engineering College<br><small>and</small><br>
+            Ghaziabad District Table Tennis Association</h2>
+            </div>
+            </div>
+            <br>
+                 <hr>
+
+                          <div class="row" id="about">
+                          
+                            
+                            <div class="col-md-12 col-md-offset-1 v-center">
+                              <h2 style="margin-left:10px;">ABOUT THE TOURNAMENT</h2>
+                              
+                               
+                               <div class="row">  <!-- 1st sub-row -->
+                                  
+                                  <div class="col-md-3 col-md-offset-1 text-center v-center">
+                                   <div class="img-circle" id="date-circle" style="margin-left:auto; margin-right:auto;">
+                                     <i class="glyphicon glyphicon-calendar symbols" style="font-size:5.4em; overflow:hidden;"></i>
+                                   </div>
+                                  <h3>November 14-15 <br><b>2014</b></h3>
+                                  <hr id="hr-small">
+                                  </div> <!-- column ends -->
+                                  <div class="col-md-7">
+                                  <p style="font-size:18px;">The 18th annual Ajay Kumar Garg Memorial Table Tennis Tournament is to be conducted on 14th and 15th November 2014 at Ajay Kumar Garg Engineering College in association with the Ghaziabad District Table Tennis Association. The tournament is held every year in an air-conditioned hall, contains simultaneous matches on various tables. Teams from NCR, Haryana, Rajasthan, Uttarakhand, UP, and Punjab mark their participation in 10 different categories ranging from 'Under 18' to 'Over 40' for men and women separately in individual and team events. A huge amount is kept as the prize money.</p>
+                                  </div> <!-- column ends -->
+                                
+                                  <br>
+                                </div>     <!-- 1st sub-row ends -->
+                                <br>
+                                <br>
+                                <br>
+                              </div>
+                              </div> <!-- row ends -->
+                              </div> <!-- container ends -->
+
+
+                                <!-- =================1st black container================-->
+
+                          <div class="container-full black-bg" id="black-image">
+                                <div class="container">
+                                <div class="row text-center">
+                                   <div class="col-md-11 v-center "> 
+                                      <h2 style="color:rgba(242, 196, 49, 0.96);">WHAT DIGNITARIES SPEAK</h2>
+                                      <div class="clearfix visible-xs"></div>
+                                    </div>  
+                                 </div>   
+                                    
+                                    
+                                        <div class="row"> <!-- 2nd row begins -->
+                                             <div class="col-md-9 col-md-offset-1">
+                                               <blockquote>
+                                                <p style="font-size:14px;">"AKGEC has always been keen to ensure the academic excellence of its students along with providing them an environment to develop themselves as active contributors towards the society, and this tournament has always been a vital platform for us to achieve our objective. The visit of eminent Table Tennis players and dignitaries in our college in this tournament is a matter on which we can certainly take pride."</p>
+                                                <footer>Dr. R.K. Agarwal, Director AKGEC, Ghaziabad</footer>
+                                                </blockquote>
+                                                <hr>
+                                               </div> <!-- column ends --> 
+                                                        
+                                        </div> <!-- 2nd row ends -->
+                                        
+                                    
+                                      <div class="row"> <!-- 2nd row begins -->
+                                             <div class="col-md-9 col-md-offset-1">
+                                               <blockquote class="blockquote-reverse">
+                                                <p style="font-size:14px;">"Every year this tournament brings a new zeal and vigour. Our college organises this event in association with the Ghaziabad District Table Tennis Association with a motive to provide the competent players a platform to showcase their talent and earn honour. We also feel proud to see the organising abilities of our student conveners, coordinators and volunteers."</p>
+                                                <footer>Prof. H.S. Siyan, Chief Organiser of the tournament, Dean Hostel, AKGEC, Ghaziabad</footer>
+                                                </blockquote>
+                                                <hr>
+                                               </div> <!-- column ends -->          
+                                        </div> <!-- 2nd row ends -->
+
+                                      
+
+                                        <div class="row"> <!-- 2nd row begins -->
+                                             <div class="col-md-9 col-md-offset-1">
+                                               <blockquote>
+                                                <p style="font-size:14px;">"We express a heartiest thanks towards Ajay Kumar Garg Engineering College for associating us and organising this prestigious tournament in their institution. We thank Dr. Agarwal, Prof. Siyan for their extreme vital support in conducting this tournament on an annual basis. We also thank players from different states for participating and making this tournament even more memorable."</p>
+                                                <footer>Mr. Praveen Gupta, Secretary, Ghaziabad District Table Tennis Association</footer>
+                                                </blockquote>
+                                                <hr>
+                                               </div> <!-- column ends -->          
+                                        </div> <!-- 2nd row ends -->
+                                        
+
+
+                                        <div class="row"> <!-- 2nd row begins -->
+                                             <div class="col-md-9 col-md-offset-1">
+                                               <blockquote class="blockquote-reverse">
+                                                <p style="font-size:14px;">"We are very happy for the event being organised in our college every year. I thank Director, Shree Praveen Gupta, Siyan sir, and all the students in organising team, it makes me very happy to see the players coming from outside playing with full energy and praising the tournament, I thank all."</p>
+                                                <footer>Mr. Pratap Singh, Sports Officer, AKGEC, Ghaziabad</footer>
+                                                </blockquote>
+                                                <hr>
+                                               </div> <!-- column ends -->          
+                                        </div> <!-- 2nd row ends -->
+
+                             </div> <!-- container ends -->
+
+                            
+                        
+                         
+                            <br>
+                            
+                       </div> 
+                          <!-- ====container full ends ===-->
+
+                             <!-- =================1st black container ends================-->
+
+
+                  <!--  =====event details row starts======== -->
+                  <div class="container">
+                      <div class="row" id="eligibility">
+                            
+                            <div class="col-md-12 col-md-offset-1 v-center">
+                              <h2 style="margin-left:28px;">EVENT DETAILS</h2>
+                               
+                             </div> 
+                        </div>      
+                                  <div class="row" style="font-size:18px;">  <!-- 2nd-row -->
+                                        <div class="col-md-3 col-md-offset-1 text-center v-center">
+                                               <div class="img-circle small-circle" style="margin-left:auto; margin-right:auto">
+                                                    <i class="glyphicon glyphicon-edit symbols-small" style="font-size:2.8em; overflow:hidden;"></i>
+                                                </div>
+                                            <h3><b>Eligibility</b></h3>
+                                            <hr id="hr-small">
+                                        </div> <!-- column ends -->         
+                                                    <div class="col-md-8"> <!-- column begins -->
+                                                       Entry For Team Championships open to:
+                                                        <ul>
+                                                            <li>
+                                                                All Professional Institutes like Medical, Engineering, Management, B.Ed, Computer Applications etc.
+                                                            </li>
+                                                            <li>
+                                                                Any graduate/Post Graduate College.
+                                                            </li>
+                                                            <li>
+                                                                Organisations (Govt./ Semi Govt./ banks)
+                                                            </li>
+                                                            <li>
+                                                                Entry for individual events open to Men and Women team members and their extra players.
+                                                            </li>
+                                                            <li>
+                                                                All Boys and Girls Schools.
+                                                            </li>
+                                                            <li>
+                                                                Entry for individual events open to Men and Women team members and their extra players.
+                                                            </li>
+                                                            
+                                                        </ul>
+                                                      </div><!-- column ends -->
+                                      </div> <!-- 2nd row ends -->
+                                                   
+ 
+                                              <div class="row" id="last-date" style="font-size:18px;"> <!-- 3rd row begins -->
+                                              <br>
+                                                          <div class="col-md-3 col-md-offset-1 text-center v-center">
+                                                            <span><h2 style="color:rgba(242, 196, 49, 0.96)">Last date</h2></span>
+                                                            <hr id="hr-small">
+                                                          </div>  
+                                                          <div class="col-md-7 v-center" style="font-size:22px;">
+                                                              Entries close temporarily on November 13, 2014, though on the spot registrations are welcome.
+                                                          </div>    
+                                                          <br>
+                                               </div> <!-- 3rd row ends -->
+                                                  <br>
+                                                 
+
+                                             
+                                              <div class="row" id="prizes"> <!-- 4th row begins -->
+                                                          <div class="col-md-3 col-md-offset-1 text-center v-center">
+                                                              <div class="img-circle small-circle" style="margin-left:auto; margin-right:auto">
+                                                                <i class="glyphicon glyphicon-gift symbols-small" style="font-size:3.4em; overflow:hidden;"></i>
+                                                              </div>
+                                                               <h3><b>Prizes</b></h3>
+                                                               <hr id="hr-small">
+                                                           </div>  <!-- column ends -->
+                                                        
+                                                        
+                                                <div class="col-md-8 text-center v-center" style="background-color:rgba(242, 196, 49, 0.70); padding:20px;
+                                                padding-top:10px; border-radius:5px; min-width:620px;"> 
+                                        <br/>
+                                            <table class="table-bordered table-hover"  style="font-size:16px; border: 1px solid black;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Position</th>
+                                                        <th>Men Team</th>
+                                                        <th>Women Team</th>
+                                                        <th>Men</th>
+                                                        <th>Women</th>
+                                                        <th>Youth Boys</th>
+                                                        <th>Youth Girls</th>
+                                                        <th>Boys (under 18)</th>
+                                                        <th>Girls (under 18)</th>
+                                                        <th>Masters Men</th>
+                                                        <th>Masters Women</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>4200</td>
+                                                        <td>2400</td>
+                                                        <td>2500</td>
+                                                        <td>1500</td>
+                                                        <td>1800</td>
+                                                        <td>1200</td>
+                                                        <td>1200</td>
+                                                        <td>1000</td>
+                                                        <td>1500</td>
+                                                        <td>1000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>3600</td>
+                                                        <td>2100</td>
+                                                        <td>2000</td>
+                                                        <td>1200</td>
+                                                        <td>1500</td>
+                                                        <td>900</td>
+                                                        <td>900</td>
+                                                        <td>800</td>
+                                                        <td>1200</td>
+                                                        <td>800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>3000</td>
+                                                        <td>1800</td>
+                                                        <td>1500</td>
+                                                        <td>900</td>
+                                                        <td>1200</td>
+                                                        <td>700</td>
+                                                        <td>700</td>
+                                                        <td>600</td>
+                                                        <td>1000</td>
+                                                        <td>600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td>1000</td>
+                                                        <td>600</td>
+                                                        <td>900</td>
+                                                        <td>500</td>
+                                                        <td>500</td>
+                                                        <td>400</td>
+                                                        <td>800</td>
+                                                        <td>--</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </div> <!-- column ends -->
+                                            </div> <!-- 4th row (prizes) ends -->
+
+                                            <div class="row" id="schedule"> <!-- 5th row begins -->
+                                                          <div class="col-md-3 col-md-offset-1 text-center v-center">
+                                                             <h2 style="color:rgba(242, 196, 49, 0.96); margin: 130px 0 0 18px;">Schedule</h2>
+                                                             <hr id="hr-small">
+                                                           </div>  <!-- column ends -->
+                                                        
+                                                <div class="col-md-8 v-center" style="font-size:16px;"> 
+                                                <b>
+                                                   <table  class="table" >
+                                                <tbody>
+                                                    <tr>
+                                                        <td>November 14, 2014</td><br>
+                                                        <td> 09:00AM</td>
+                                                        <td>Team Championship (Men and Women) and indivdual events- boys and youth boys</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>11:00AM</td>
+                                                        <td>Individual events- Women, girls, youth girls</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>02:30PM</td>
+                                                        <td>Individual events- Mens</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>November 15, 2014</td><br>
+                                                        <td> 09:00AM</td>
+                                                        <td>Rest of the mathes of first day and masters (men and women)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>04:30PM</td>
+                                                        <td>Finals</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </b>
+                                            </div> <!-- column ends -->
+                                           </div><!--  5th row -schedule-ends -->  
+                                           
+
+                                            <div class="row" id="entry-fees"> <!-- 6th row begins -->
+                                                          <div class="col-md-3 col-md-offset-1 text-center v-center">
+                                                              <div class="img-circle small-circle" style="margin-left:auto; margin-right:auto">
+                                                                <i class="glyphicon glyphicon-tags symbols-small" style="font-size:3.2em; margin:38px 0 0 -5px;"></i>
+                                                              </div>
+                                                               <h3><b>Entry<br>Fees</b></h3>
+                                                               <hr id="hr-small">
+                                                           </div>  <!-- column ends -->
+                                                        <br>
+                                                        <br>
+                                                <div class="col-md-8 v-center" style=" font-size:16px;background-color: rgba(242, 196, 49, 0.70);padding: 20px;padding-top: 10px;border-radius: 5px;"> 
+                                                <b>
+                                                  <table class="table-bordered table-hover" >
+                                                <thead class="active">
+                                                    <tr class="active">
+                                                        <th class="warning">S.No.</th>
+                                                        <th>Team</th>
+                                                        <th>Age</th>
+                                                        <th>Criteria</th>
+                                                        <th>Entry Fees (in Rs.)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Men Team</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td>500.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Women Team</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td>500.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Men</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td>250.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Women</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td>250.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Youth Boys</td>
+                                                        <td>Under 21 years</td>
+                                                        <td>Born on or after January 1, 1994</td>
+                                                        <td>250.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Youth Girls</td>
+                                                        <td>Under 21 years</td>
+                                                        <td>Born on or after January 1, 1994</td>
+                                                        <td>250.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Boys</td>
+                                                        <td>Under 18 years</td>
+                                                        <td>Born on or after January 1, 1997</td>
+                                                        <td>250.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Girls</td>
+                                                        <td>Under 18 years</td>
+                                                        <td>Born on or after January 1, 1997</td>
+                                                        <td>250.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Masters (men)</td>
+                                                        <td>Over 40 years</td>
+                                                        <td>Born on or before January 1, 1974</td>
+                                                        <td>250.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Masters (women)</td>
+                                                        <td>Over 40 years</td>
+                                                        <td>Born on or before January 1, 1974</td>
+                                                        <td>250.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </b>
+                                            </div> <!-- column ends -->
+                                           </div><!--  6th row -fees-ends -->  
+
+                                           <br>
+                                           <br>
+                                              <div class="row" id="notes" style="font-size:18px;"> <!-- 7th row NOTES begins -->
+                                                          <div class="col-md-3 col-md-offset-1 text-center v-center">
+                                                            <span><h2 style="color:rgba(242, 196, 49, 0.96)">Notes</h2></span>
+                                                            <hr id="hr-small">
+                                                          </div>  
+                                                          <div class="col-md-8 v-center" style="font-size:18px;">
+                                                                          <ul style="list-style-type: square;">
+                                                                          
+                                                            <li>Outstation players shall be provided free boarding & lodging (in the hostel) if required.</li>
+                                                            <li>Each Institute/Organisation may send one or two teams per event. There is no limit of participants for individual events. </li>
+                                                            <li>The tournament will be played on knock out basis.</li>
+                                                            <li>Each team shall consist of not more than three players.</li>
+                                                            <li>The tournament will be conducted as per TTFI rules.</li>
+                                                            <li>There will be three players in the team and they will draw for choice of ABC & XYZ playing order & the pattern of play will be as under:
+                                                                <ol>
+                                                                    <li>A v/s X</li>
+                                                                    <li>B v/s Y</li>
+                                                                    <li>C v/s Z</li>
+                                                                    <li>A v/s Y</li>
+                                                                    <li>B v/s X</li>
+                                                                </ol>
+                                                            </li>
+                                                            <li>The decision of the tournament committee will be final in all the matters.</li>
+                                                            <li>Dress regulations: All the participating players (Except Masters) are requested to wear proper kit like Half Pant, Skirt, T-Shirt etc.</li>
+                                                        </ul>
+                                                          </div>    
+                                                          
+                                               </div> <!-- 7th row NOTES ends -->
+                                                  <br>
+                                                  <hr>
+                                                  <br>
+                      </div>
+                    </div> <!-- =====event details row ends======== -->
+                    </div> <!-- =====event details row container ends======== -->
+                    </div>
+                  <br>
+                  <br>
+                        <!--======== black container begins=========== -->
+                    <!-- ORGANISING ROW START -->
+                    <div class="container-full black-bg" id="black-image">
+                            <div class="container" id="organising-committee">
+                              <div class="row text-center" style="margin-top:25px;">
+                                 
+                                 <div class="col-md-11 v-center">
+                                    <h2 style="color:rgba(242, 196, 49, 0.96);">ORGANISING COMMITTEE</h2>
+                                    
+                                </div>
+                            </div> <!-- ORGANISING COMM heading row ends -->
+
+
+                           <div class="row text-center"> 
+                              <br><!-- 2nd content row -->
+                              <div class="col-md-5 col-md-offset-1">
+                                <div> <!-- sub-row 1 -->
+                                   <div class="col-md-4"> <!-- sub-col 1 -->
+                                    <div class="img-circle circle2" style="margin-left:auto; margin-right:auto">
+                                      <i class="glyphicon glyphicon-user symbols-small" style="font-size:3.1em; margin:28px 0 0 0px;"></i>
+                                    </div><h4>Organising<br>Heads</h4> 
+                                    <hr id="hr-small">
+                                    </div> <!-- sub-col 1 ends -->
+
+                                    <div class="col-md-8"> <!-- sub col 2 -->
+                                       
+                                       <h4>Prof. H.S. Siyan</h4>+91-9911913242
+                                       <h4>Mr. Pratap Singh </h4> +91-9718994374
+									   <h4>Sh. Praveen Gupta</h4> +91-9810633966
+                                       <h4>Sh. Rajeev Sharma </h4> +91-9818085060
+
+                                       <hr id="hr-small">
+                                    </div> <!-- sub col 2 ends -->
+
+                                 </div> <!-- sub row 1 ends --> 
+                              </div> <!-- main col 1 ends -->
+
+
+                              <div class="col-md-5"> <!-- main col 2  -->
+                                <div> <!-- sub-row 1 -->
+                                   <div class="col-md-4"> <!-- sub-col 1 -->
+                                    <div class="img-circle circle2" style="margin-left:auto; margin-right:auto">
+                                      <i class="glyphicon glyphicon-book symbols-small" style="font-size:3.2em; margin:28px 0 0 0px;"></i>
+                                    </div><h4 style="margin-left:08px;">Convenors</h4> 
+                                    <hr id="hr-small">
+                                    </div> <!-- sub-col 1 ends -->
+
+                                    <div class="col-md-8"> <!-- sub col 2 -->
+									<h4>Udbhav Pandey</h4> +91-9810294286
+                                       <h4>Karan Tyagi</h4> +91-7838007809                                       
+                                       <h4>Arjun V. Kansal</h4> +91-9015179744
+                                       <hr id="hr-small">
+                                         
+
+                                    </div> <!-- sub col 2 ends -->
+
+                                 </div> <!-- sub row 1 ends --> 
+                              </div> <!-- main col 2 ends -->
+
+
+
+                            </div> <!-- 1st content row of org committee ends  -->
+                             <br>
+                             <br>
+                              <hr>
+                            <div class="row text-center"> <!-- webteam heading -->
+                               <div class="col-md-12"> 
+                               <div class="img-circle "></div>
+                                <h2 style="color:rgba(242, 196, 49, 0.96)">WEB</h2> 
+                               </div>
+                            </div> <!-- row heading ends -->
+
+                            <div class="row text-center"> 
+                              <br><!-- web content row -->
+                              <div class="col-md-5 col-md-offset-1">
+                                <div> <!-- sub-row 1 -->
+                                   <div class="col-md-4"> <!-- sub-col 1 -->
+                                    <div class="img-circle circle2" style="margin-left:auto; margin-right:auto">
+                                      <i class="glyphicon glyphicon-globe symbols-small" style="font-size:3.2em; margin:28px 0 0 0px;"></i>
+                                    </div><h4>Web Masters</h4> 
+                                    <hr id="hr-small">
+                                    </div> <!-- sub-col 1 ends -->
+
+                                    <div class="col-md-8"> <!-- sub col 2 -->
+                                       <h4>Archit Saxena</h4> +91-9643275984
+                                       <h4>Priyanshu Agrawal</h4>+91-8860531876
+                                       <hr id="hr-small">
+                                    </div> <!-- sub col 2 ends -->
+
+                                 </div> <!-- sub row 1 ends --> 
+                              </div> <!-- main col 1 ends -->
+
+
+                              <div class="col-md-5"> <!-- main col 2  -->
+                                <div> <!-- sub-row 1 -->
+                                   <div class="col-md-4"> <!-- sub-col 1 -->
+                                    <div class="img-circle circle2" style="margin-left:auto; margin-right:auto">
+                                      <i class="glyphicon glyphicon-qrcode symbols-small" style="font-size:3.2em; margin:28px 0 0 0px;"></i>
+                                    </div><h4 style="margin-left:9px;">Web Team</h4> 
+                                    <hr id="hr-small">
+                                    </div> <!-- sub-col 1 ends -->
+
+                                    <div class="col-md-8"> <!-- sub col 2 -->
+                                       <h3 style="font-size:20px;">Nikhil Singh</h3>
+                                       <h3 style="font-size:20px;">Ashutosh Jainvi</h3>
+                                       <hr id="hr-small">
+                                    </div> <!-- sub col 2 ends -->
+
+                                 </div> <!-- sub row 1 ends --> 
+                              </div> <!-- main col 2 ends -->
+
+
+                                <br>
+                                <br>
+                            </div> <!--web content row of org committee ends  --> 
+                            <br>
+                            <br>
+                            <br>
+                     
+                    
+                    </div> <!-- its container ends -->
+                    </div>
+                       <!--======== 2nd black container ends=========== -->
+               
+         <br>
+        <br>
+         <br>
+         
+         <!-- query ROW START -->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-3 text-center">
+                        <h1>Queries ?<br><small><em>Write to us.</em></small></h1>
+                        <hr id="hr-small">
+                        
+                      </div>
+              
+                      <div class="col-md-3 text-center v-center">
+                          <div class="query">
+
+                              <input type="text" class="form-control" id="emailTextBox" placeholder="Enter Your email ID or Contact Number" required/>
+                              <br/>
+                              <textarea class="form-control" rows="6" id='queryTextArea' placeholder="Enter Your Message" required/></textarea>
+                              <br/>
+                              <input type='button' id='querySubmitButton' class="button btn btn-warning" value="submit" />
+                          </div>
+                          <hr id="hr-small">
+                      </div> <!-- column ends -->
+
+                      <div class="col-md-4 col-md-offset-1 ">
+                         <h2 style="margin-top:0;"><small class="text-center"><em>Powered By</em></small><br>Software Incubator</h2>
+
+                         <div class="img-circle" id="date-circle">
+                                      <a href="http://www.silive.in">
+                                      <img src="images/silogo.png" style="width:103px; margin:20px 0 0 30px;">
+                                      </a>
+                                    </div>
+                      <br>
+                     <br>
+                      </div>
+
+                    </div>
+                      <br>
+                    <!-- query row ends -->
+                    </div>  <!-- query row container ends -->
+                   
+                    <div class="container-full black-bg" id="black-image">
+                    <div class="container" id="reach-us"> 
+                    <div class="row">
+                       <div class="col-md-12 text-center" style="color:rgba(242, 196, 49, 0.86);"><h1>REACH US</h1></div>
+                       <br>
+                     </div>
+                   
+
+                     <div class="row">
+                       <div class="col-md-10 col-md-offset-1">
+                       <iframe src="./test.html" height="450px" width="100%"  frameborder="0" scrolling="no"></iframe>
+                       </div>
+                       <br>
+                       
+                     </div>
+                     <hr>
+                     </div>
+                     </div>
+    
+    	</div><!--main container fluid ends-->
+
+
+
+                <!-- =======================REGISTER MODAL======================== -->
+
+                <div  id="register" class="modal fade" role="dialog">
+                     <div class="modal-dialog">
+                       <div class="modal-content">
+                         <div class="modal-header"> 
+                            <h3>Register
+                              <span class="pull-right" data-dismiss="modal" style=" cursor:pointer; color: rgba(242, 196, 49, 0.99);">X</span></h3>
+                          </div>
+                          <div class="modal-body">
+                                <div>
+                                    <iframe src="./home.html" height="580px" width="100%" frameborder="0" scrolling="no"></iframe>
+                                  </div>
+                          </div> <!-- modal body ends -->
+                       </div> <!-- modal-content ends -->
+                     </div>
+                </div>
+
+                     <!--  ================REGISTER MODAL ENDS ==========-->
+                     
+                     <a href="#body"><div class="btn btn-warning pull-right" id="top">
+                     
+                     <i class="glyphicon glyphicon-chevron-up" style="font-size:1.1em;"></i>
+                     </div></a>
+
+
+                     
+    </body>
+</html>

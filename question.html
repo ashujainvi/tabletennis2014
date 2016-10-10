@@ -1,0 +1,79 @@
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+
+    <link rel="shortcut icon" href="images/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="css/styleblocks.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jq.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="script/jquery.js"></script>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#querySubmitButton').click(function(){
+			 var contact = $('#emailTextBox').val();
+			 var query = $('#queryTextArea').val();
+			 var html_content = $('.query').html();
+			 $('.query').html("Sending... Please Wait!")
+			 $.ajax({
+			 	type : 'post',
+			 	url : 'query.php',
+			 	data : {
+			 		contact : contact,
+			 		query : query
+			 	}
+			 }).done(function(message){
+			 	console.log(message);
+			 	$('.query').html(html_content);
+			 	if (message == -1) {
+			 		alert("Enter valid contact details");
+			 	}
+			 	else if (message == -2) {
+			 		alert("Enter valid query");
+			 	}
+			 	else {
+			 		alert("We will contact you soon");
+			 	}
+			 });
+		});
+	});
+</script>
+<style type="text/css">
+	#queryTextArea
+	{
+		border-color: black;
+		width:50%;
+		height: 250px;
+		margin-top: 1%;
+		margin-left: 5%;
+	}
+	#emailTextBox
+	{
+		border-color: black;
+		margin-left: 5%;
+		width: 50%;
+		margin-top: 4%;
+	}
+	
+</style>
+<body>
+	<div class="query">
+
+			<input type='textbox' id="emailTextBox" placeholder="Your email Id or Contact Number" required/>
+			<br/>
+			<textarea class="form-control"id='queryTextArea' required/></textarea>
+			<br/>
+			<input type='button' id='querySubmitButton' class="btn btn-info"value="submit" />
+	</div>
+</body>
+</html>
